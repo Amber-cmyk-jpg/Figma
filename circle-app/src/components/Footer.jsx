@@ -1,66 +1,100 @@
 import React from 'react';
+import RectangleImage from '../assets/Rectangle.png';
+import LinkedinIcon from '../assets/linkedin.png';
+import TwitterIcon from '../assets/twitter.png';
 
-export default function Footer() {
+const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-gray-400 py-16 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6 bg-cyan-400 rounded-full flex items-center justify-center">
-                <span className="text-white font-bold">○</span>
-              </div>
-              <span className="text-white font-bold">circle</span>
-            </div>
-            <p className="text-sm">A powerful online engagement tool</p>
-          </div>
+    <footer className="text-white pt-20 pb-10" style={{ backgroundColor: '#333030' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
 
-          {/* Company Links */}
+          {/* Map Area */}
+<div className="lg:col-span-2 relative flex items-center justify-center" style={{ height: '210px', width: '280px' }}>
+  {/* Rectangle image */}
+  <img
+    src={RectangleImage}
+    alt="USA Map"
+    className="absolute top-0 left-0 w-full h-full object-contain"
+  />
+
+  {/* Text overlay */}
+  <p className="absolute top-22 left1/2 transform -translate-x1/2 text-xs font-bold text-white">
+    Made with lots of ❤️ in San Francisco
+  </p>
+</div>
+
+           
+          
+
+          {/* Products Column */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition">About</a></li>
-              <li><a href="#" className="hover:text-white transition">Careers</a></li>
-              <li><a href="#" className="hover:text-white transition">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition">Contact</a></li>
+            <h4 className="text-lg font-bold mb-6 text-white">Products</h4>
+            <ul className="space-y-4 text-gray-400">
+              <li><a href="#" className="hover:text-primary transition-colors">Delta</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Sigma</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Zeta</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Alpha</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Acumen</a></li>
             </ul>
           </div>
 
-          {/* Product Links */}
+          {/* Resources Column */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Product</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition">Features</a></li>
-              <li><a href="#" className="hover:text-white transition">Pricing</a></li>
-              <li><a href="#" className="hover:text-white transition">Security</a></li>
-              <li><a href="#" className="hover:text-white transition">Support</a></li>
+            <h4 className="text-lg font-bold mb-6 text-white">Resources</h4>
+            <ul className="space-y-4 text-gray-400">
+              <li><a href="#" className="hover:text-primary transition-colors">Help</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Training Videos</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Webinars</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Request a Demo</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Create Surveys</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Quiz Maker</a></li>
             </ul>
           </div>
 
-          {/* Legal Links */}
+          {/* Company Column */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Legal</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-white transition">Privacy</a></li>
-              <li><a href="#" className="hover:text-white transition">Terms</a></li>
-              <li><a href="#" className="hover:text-white transition">Cookie Policy</a></li>
-              <li><a href="#" className="hover:text-white transition">GDPR</a></li>
+            <h4 className="text-lg font-bold mb-6 text-white">Company</h4>
+            <ul className="space-y-4 text-gray-400">
+              <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Team</a></li>
+              <li><a href="#" className="hover:text-primary transition-colors">Contact Us</a></li>
             </ul>
           </div>
+
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">&copy; 2024 Circle. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0">
-            <a href="#" className="hover:text-white transition">Twitter</a>
-            <a href="#" className="hover:text-white transition">LinkedIn</a>
-            <a href="#" className="hover:text-white transition">GitHub</a>
+        {/* Bottom Strip */}
+        <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+
+          {/* Copyright — left */}
+          <span>Copyright 2022 Circle. All rights reserved.</span>
+
+          {/* Social Icons — center */}
+          <div className="flex items-center space-x-3">
+            <a href="#" aria-label="LinkedIn">
+              <img src={LinkedinIcon} alt="LinkedIn" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+            </a>
+            <a href="#" aria-label="Twitter">
+              <img src={TwitterIcon} alt="Twitter" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+            </a>
           </div>
+
+          {/* Legal Links — right */}
+          <div className="flex items-center space-x-2">
+            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+            <span>|</span>
+            <a href="#" className="hover:text-white transition-colors">Data & Security</a>
+            <span>|</span>
+            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+
         </div>
+
       </div>
     </footer>
   );
-}
+};
 
+export default Footer;

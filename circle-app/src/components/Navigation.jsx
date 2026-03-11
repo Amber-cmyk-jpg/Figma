@@ -2,22 +2,22 @@ import React from 'react';
 
 export default function Navigation() {
   return (
-    <nav className="flex justify-between items-center px-8 py-6 bg-white shadow-sm">
+    <nav className="flex justify-between items-center px-8 py-5 bg-white shadow-sm sticky top-0 z-50">
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
-          <span className="text-white font-bold text-lg">○</span>
+        <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+          <span className="text-white font-bold text-xl">○</span>
         </div>
-        <span className="text-xl font-bold text-gray-900">circle</span>
+        <span className="text-2xl font-bold text-dark">circle</span>
       </div>
       
       <div className="hidden md:flex gap-8 items-center">
-        <a href="#" className="text-gray-700 hover:text-gray-900">Features</a>
-        <a href="#" className="text-gray-700 hover:text-gray-900">Pricing</a>
-        <a href="#" className="text-gray-700 hover:text-gray-900">Testimonials</a>
-        <a href="#" className="text-gray-700 hover:text-gray-900">Resources</a>
+        <a href="#features" className="text-gray-600 hover:text-primary font-medium transition">Features</a>
+        <a href="#pricing" className="text-gray-600 hover:text-primary font-medium transition">Pricing</a>
+        <a href="#customers" className="text-gray-600 hover:text-primary font-medium transition">Testimonials</a>
+        <a href="#" className="text-gray-600 hover:text-primary font-medium transition">Resources</a>
       </div>
 
-      <button className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 rounded hover:bg-cyan-50 transition">
+      <button className="btn-login w-[138px] h-[38px] rounded px-5 py-2.5 font-medium transition flex items-center justify-center gap-2.5">
         Login
       </button>
     </nav>
