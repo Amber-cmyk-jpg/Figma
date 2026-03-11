@@ -20,38 +20,31 @@ export default function HowItWorks() {
   ];
 
   return (
-    <section className="py-24 px-4 bg-white">
+    <section className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
-        <p className="text-center text-primary text-sm font-semibold uppercase tracking-widest mb-4">
+        <p className="text-center text-cyan-500 text-sm font-semibold uppercase tracking-wide mb-4">
           HOW IT WORKS
         </p>
         
-        <h2 className="text-center text-4xl md:text-5xl font-bold text-dark mb-6">
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-16">
           Get started in three simple steps
         </h2>
-        
-        <p className="text-center text-gray-600 text-xl max-w-2xl mx-auto mb-16">
-          Set up your community in minutes and start engaging with your members right away
-        </p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="text-center relative">
-              <div className="inline-flex items-center justify-center w-24 h-24 bg-primary/10 rounded-2xl mb-6">
-                <span className="text-primary text-3xl font-bold">{step.number}</span>
+            <div key={index} className="text-center">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-cyan-100 rounded-full mb-6">
+                <span className="text-cyan-500 text-2xl font-bold">{step.number}</span>
               </div>
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary/30 to-transparent"></div>
-              )}
-              <h3 className="text-2xl font-bold text-dark mb-3">{step.title}</h3>
-              <p className="text-gray-600 text-lg">{step.description}</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
+              <p className="text-gray-600">{step.description}</p>
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="text-center mt-16">
-          <button className="bg-primary hover:bg-primary-dark text-white px-10 py-4 rounded-xl font-semibold text-lg transition shadow-lg hover:shadow-xl">
+          <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded font-semibold transition">
             Start your free trial
           </button>
         </div>

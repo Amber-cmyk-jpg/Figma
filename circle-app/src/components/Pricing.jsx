@@ -51,17 +51,17 @@ export default function Pricing() {
   ];
 
   return (
-    <section id="pricing" className="py-24 px-4 bg-light">
+    <section className="py-20 px-4 bg-gray-50">
       <div className="max-w-6xl mx-auto">
-        <p className="text-center text-primary text-sm font-semibold uppercase tracking-widest mb-4">
+        <p className="text-center text-cyan-500 text-sm font-semibold uppercase tracking-wide mb-4">
           PRICING
         </p>
         
-        <h2 className="text-center text-4xl md:text-5xl font-bold text-dark mb-6">
+        <h2 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
           Simple, transparent pricing
         </h2>
         
-        <p className="text-center text-gray-600 text-xl max-w-2xl mx-auto mb-16">
+        <p className="text-center text-gray-600 text-lg max-w-2xl mx-auto mb-16">
           Choose the plan that fits your needs. All plans include a 14-day free trial.
         </p>
 
@@ -71,37 +71,37 @@ export default function Pricing() {
               key={index} 
               className={`bg-white rounded-2xl p-8 transition ${
                 plan.popular 
-                  ? 'ring-4 ring-primary shadow-2xl scale-105 relative' 
-                  : 'border border-gray-200 hover:shadow-xl'
+                  ? 'ring-2 ring-cyan-400 shadow-lg scale-105' 
+                  : 'border border-gray-200 hover:shadow-md'
               }`}
             >
               {plan.popular && (
-                <span className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-primary text-white text-sm font-semibold px-4 py-1.5 rounded-full">
+                <span className="bg-cyan-400 text-white text-xs font-semibold px-3 py-1 rounded-full">
                   Most Popular
                 </span>
               )}
               
-              <h3 className="text-2xl font-bold text-dark mt-2">{plan.name}</h3>
-              <div className="mt-6 mb-4">
-                <span className="text-5xl font-bold text-dark">{plan.price}</span>
-                {plan.price !== 'Custom' && <span className="text-gray-500 text-lg">/month</span>}
+              <h3 className="text-xl font-bold text-gray-900 mt-4">{plan.name}</h3>
+              <div className="mt-4 mb-2">
+                <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
+                {plan.price !== 'Custom' && <span className="text-gray-500">/month</span>}
               </div>
-              <p className="text-gray-500 mb-6">{plan.description}</p>
+              <p className="text-gray-500 text-sm mb-6">{plan.description}</p>
               
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, idx) => (
-                  <li key={idx} className="flex items-center gap-3 text-gray-600">
-                    <span className="text-primary text-xl">✓</span>
+                  <li key={idx} className="flex items-center gap-2 text-gray-600">
+                    <span className="text-cyan-500">✓</span>
                     {feature}
                   </li>
                 ))}
               </ul>
               
               <button 
-                className={`w-full py-4 rounded-xl font-semibold text-lg transition ${
+                className={`w-full py-3 rounded font-semibold transition ${
                   plan.popular
-                    ? 'bg-primary hover:bg-primary-dark text-white shadow-lg hover:shadow-xl'
-                    : 'bg-gray-100 hover:bg-primary hover:text-white text-dark'
+                    ? 'bg-cyan-500 hover:bg-cyan-600 text-white'
+                    : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
                 }`}
               >
                 {plan.cta}
