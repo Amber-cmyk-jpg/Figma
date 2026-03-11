@@ -1,8 +1,13 @@
 import React from 'react';
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import heroBg from '../assets/image1.png';
 import heroImg from '../assets/image2.png';
+=======
+import image1 from '../assets/image1.png';
+import image2 from '../assets/image2.png';
+>>>>>>> main
 
 const Hero = () => {
   return (
