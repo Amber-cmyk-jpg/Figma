@@ -1,13 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import { ChevronRight } from 'lucide-react';
 import heroBg from '../assets/image1.png';
 import heroImg from '../assets/image2.png';
-=======
-import image1 from '../assets/image1.png';
-import image2 from '../assets/image2.png';
->>>>>>> main
 
 const Hero = () => {
   return (
@@ -23,7 +18,7 @@ const Hero = () => {
           maxWidth: '100%',
           height: '650px',
           backgroundColor: '#0CBBC7',
-          opacity: 0.10,
+          opacity: 0.1,
           pointerEvents: 'none',
           zIndex: 0,
         }}
@@ -42,14 +37,13 @@ const Hero = () => {
           maxWidth: '100%',
           height: '650px',
           objectFit: 'cover',
-          opacity: 0.10,
+          opacity: 0.1,
           pointerEvents: 'none',
           zIndex: 0,
         }}
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -131,24 +125,23 @@ const Hero = () => {
               height: 'auto',
             }}
           >
-           
             {/* image2.png - Foreground layer */}
             <img
               src={heroImg}
               alt="team"
               style={{
-               width: '100%',
-display: 'block',
-borderRadius: '20px',
-zIndex: 2,
+                width: '100%',
+                display: 'block',
+                borderRadius: '20px',
+                zIndex: 2,
               }}
             />
           </div>
         </motion.div>
-
       </div>
     </section>
   );
 };
 
 export default Hero;
+
